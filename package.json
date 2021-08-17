@@ -1,0 +1,15 @@
+{
+  "name": "tchatozaure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "git@github.com:antoinecellier/tchatozaure.git",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "shared/",
+      "mobile/",
+      "web/"
+    ]
+  }
+}

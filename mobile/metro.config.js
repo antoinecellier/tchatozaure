@@ -4,14 +4,35 @@
  *
  * @format
  */
+const path = require('path');
+
+const extraNodeModules = {
+  common: path.resolve(__dirname + '/../shared'),
+};
+
+const watchFolders = [
+  path.resolve(__dirname, '..', 'shared'),
+  path.resolve(__dirname, '..', 'node_modules'),
+];
 
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({
       transform: {
         experimentalImportSupport: false,
-        inlineRequires: true,
+        inlineRequires: false,
       },
     }),
   },
+  resolver: {
+    extraNodeModules: new Proxy(
+      {},
+      {
+        get: (target, name) => {
+          return path.join(__dirname, `node_modules/${name}`);
+        },
+      },
+    ),
+  },
+  watchFolders,
 };

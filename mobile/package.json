@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "tchatozaure-mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,5 +25,11 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**"
+    ]
   }
 }
