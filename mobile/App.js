@@ -9,12 +9,11 @@ import {
   View,
 } from 'react-native';
 
-import shared from '@tchatozaure/shared';
-const {styles, business} = shared;
+import {styles} from '@tchatozaure/shared';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  console.log(business.flatArray());
+
   return (
     <SafeAreaView>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />

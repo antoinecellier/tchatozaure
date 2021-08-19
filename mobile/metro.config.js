@@ -6,10 +6,6 @@
  */
 const path = require('path');
 
-const extraNodeModules = {
-  common: path.resolve(__dirname + '/../shared'),
-};
-
 const watchFolders = [
   path.resolve(__dirname, '..', 'shared'),
   path.resolve(__dirname, '..', 'node_modules'),

@@ -1,7 +1,5 @@
-import * as styles from './styles'
-import * as business from './business'
+import * as sharedStyles from './styles'
+import * as sharedBusiness from './business'
 
-export default {
-    styles,
-    business
-}
+export const styles = sharedStyles
+export const business = sharedBusiness
