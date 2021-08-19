@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "tchatozaure-mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "@tchatozaure/shared": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -25,5 +26,11 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**"
+    ]
   }
 }
