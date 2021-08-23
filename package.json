@@ -4,13 +4,10 @@
   "private": true,
   "repository": "git@github.com:antoinecellier/tchatozaure.git",
   "license": "MIT",
-  "dependencies": {
-    "react-native": "0.64.2",
-    "react-native-web": "^0.17.1"
-  },
-  "devDependencies": {
-    "@types/react-native": "^0.64.13",
-    "babel-plugin-react-native-web": "^0.17.1"
+  "scripts": {
+    "clean": "yarn clean:yarn.lock && yarn clean:node_modules",
+    "clean:node_modules": "rm -rf node_modules web/node_modules shared/node_modules mobile/node_modules",
+    "clean:yarn.lock": "rm -rf yarn.lock web/yarn.lock shared/yarn.lock mobile/yarn.lock"
   },
   "workspaces": {
     "packages": [

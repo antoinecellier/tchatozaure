@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 
-import {SendButton} from '@tchatozaure/shared/src/components';
+import {SendButton, Avatar} from '@tchatozaure/shared/src/components';
 import * as styles from '@tchatozaure/shared/src/styles';
 
 const App = () => {
@@ -22,6 +22,7 @@ const App = () => {
         <View>
           <Text style={stylesComponent.highlight}>Tchatozaure</Text>
           <SendButton />
+          <Avatar />
         </View>
       </ScrollView>
     </SafeAreaView>
