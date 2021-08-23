@@ -7,6 +7,7 @@
 const path = require('path');
 
 const watchFolders = [
+  path.resolve(__dirname, '..', 'shared', 'src'),
   path.resolve(__dirname, '..', 'shared'),
   path.resolve(__dirname, '..', 'node_modules'),
 ];
