@@ -9,7 +9,8 @@ import {
   View,
 } from 'react-native';
 
-import {styles} from '@tchatozaure/shared';
+import {SendButton} from '@tchatozaure/shared/src/components';
+import * as styles from '@tchatozaure/shared/src/styles';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -20,6 +21,7 @@ const App = () => {
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
           <Text style={stylesComponent.highlight}>Tchatozaure</Text>
+          <SendButton />
         </View>
       </ScrollView>
     </SafeAreaView>
