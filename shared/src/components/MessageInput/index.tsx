@@ -1,9 +1,8 @@
 import React from 'react'
 import { Button } from 'react-native'
-import AvatarComponent from './Avatar'
 
-export const SendButton = () => (
+const MessageInput = () => (
     <Button title= "Send messages" onPress={() => console.log('pressed')} />
 )
 
-export const Avatar = AvatarComponent
+export default MessageInput

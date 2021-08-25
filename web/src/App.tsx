@@ -1,4 +1,4 @@
-import { SendButton, HeaderText } from '@tchatozaure/shared/src/components'
+import Bubble from '@tchatozaure/shared/src/components/Bubble'
 import * as styles from '@tchatozaure/shared/src/styles'
 
 import './App.css'
@@ -11,8 +11,8 @@ function App() {
         <p style={{ color: styles.PRIMARY_COLOR }}>
           Tchatozaure
         </p>
-        <HeaderText />
-        <SendButton />
+        <Bubble content="coucou" />
+        <Bubble content="ça va ?" secondary />
       </header>
     </div>
   );

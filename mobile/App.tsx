@@ -3,14 +3,11 @@ import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
-  Text,
   useColorScheme,
   View,
 } from 'react-native';
 
-import {SendButton, Avatar} from '@tchatozaure/shared/src/components';
-import * as styles from '@tchatozaure/shared/src/styles';
+import Bubble from '@tchatozaure/shared/src/components/Bubble'
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -20,20 +17,12 @@ const App = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View>
-          <Text style={stylesComponent.highlight}>Tchatozaure</Text>
-          <SendButton />
-          <Avatar />
+          <Bubble content="coucou" />
+          <Bubble content="ça va ?" secondary />
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const stylesComponent = StyleSheet.create({
-  highlight: {
-    fontWeight: '700',
-    color: styles.PRIMARY_COLOR,
-  },
-});
 
 export default App;
