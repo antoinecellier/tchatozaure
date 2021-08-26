@@ -4,6 +4,9 @@
   "private": true,
   "repository": "git@github.com:antoinecellier/tchatozaure.git",
   "license": "MIT",
+  "dependencies": {
+    "react": "17.0.2"
+  },
   "scripts": {
     "clean": "yarn clean:yarn.lock && yarn clean:node_modules",
     "clean:node_modules": "rm -rf node_modules web/node_modules shared/node_modules mobile/node_modules",

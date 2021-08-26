@@ -1,4 +1,6 @@
 import Bubble from '@tchatozaure/shared/src/components/Bubble'
+import MessageInput from '@tchatozaure/shared/src/components/MessageInput'
+
 import * as styles from '@tchatozaure/shared/src/styles'
 
 import './App.css'
@@ -7,13 +9,9 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
-        <p style={{ color: styles.PRIMARY_COLOR }}>
-          Tchatozaure
-        </p>
-        <Bubble content="coucou" />
-        <Bubble content="ça va ?" secondary />
-      </header>
+      <Bubble content="coucou" />
+      <Bubble content="ça va ?" secondary />
+      <MessageInput onSend={(msg) => console.log(msg)}/>
     </div>
   );
 }

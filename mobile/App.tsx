@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import Bubble from '@tchatozaure/shared/src/components/Bubble'
+import MessageInput from '@tchatozaure/shared/src/components/MessageInput'
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -19,6 +20,7 @@ const App = () => {
         <View>
           <Bubble content="coucou" />
           <Bubble content="ça va ?" secondary />
+          <MessageInput displayButtonLabel={false} onSend={(msg) => console.log(msg)}/>
         </View>
       </ScrollView>
     </SafeAreaView>
