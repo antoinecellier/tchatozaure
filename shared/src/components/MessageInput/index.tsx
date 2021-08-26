@@ -41,14 +41,18 @@ type MessageFormProps = {
 
 const MessageInput = ({ onSend, displayButtonLabel = true }: MessageFormProps) => {
     const [message, onChangeMessage] = useState("");
-
+    const onSendPress = () => {
+        onSend(message)
+        onChangeMessage("")
+    }
     return (
         <Container>
             <Input
-                onChangeText={onChangeMessage} 
+                onChangeText={onChangeMessage}
+                value={message}
                 placeholder="Enter your message" 
             />
-            <TouchableOpacity onPress={() => onSend(message)}>
+            <TouchableOpacity onPress={onSendPress}>
                 <FontAwesomeIcon icon={ faPaperPlane } color="#fff" style={{ marginRight: 5 }} />
                 {displayButtonLabel && <ButtonText>Send</ButtonText>}
             </TouchableOpacity>
