@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import { SECONDARY_COLOR } from '@tchatozaure/shared/src/styles'
 
-import Logo from "../logo";
+import Logo from "../logo"
 
 const Container = styled.div`
     display: flex;
