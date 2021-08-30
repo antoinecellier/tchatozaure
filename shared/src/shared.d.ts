@@ -7,3 +7,4 @@ declare module '@tchatozaure/shared/src/components/Avatar';
 
 declare module '@tchatozaure/shared/src/styles';
 declare module '@tchatozaure/shared/src/business';
+declare module '@tchatozaure/shared/src/business/useMessageListContext';

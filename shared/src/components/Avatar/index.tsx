@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/native'
 import { ImageSourcePropType } from 'react-native';
 
-const SIZE = 64
+const SIZE = 42
 
 const Container = styled.View`
   width: ${SIZE}px;
