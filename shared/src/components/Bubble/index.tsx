@@ -1,4 +1,5 @@
 import React from 'react'
+import { StyleProp, ViewStyle } from 'react-native'
 import styled from 'styled-components/native'
 
 import * as styles from '../../styles'
@@ -6,6 +7,7 @@ import * as styles from '../../styles'
 type BubbleType =  {
     primary?: boolean;
     secondary?: boolean;
+    style?: StyleProp<ViewStyle>;
 }
 
 const Container = styled.View<BubbleType>`
@@ -22,9 +24,9 @@ type BubbleProps = {
     content: string;
 } & BubbleType
 
-const Bubble = ({ content, secondary, primary }: BubbleProps) => {
+const Bubble = ({ content, secondary, primary, style }: BubbleProps) => {
     return (
-      <Container primary={primary} secondary={secondary}>
+      <Container primary={primary} secondary={secondary} style={style} >
         <Text primary={primary} secondary={secondary}>{content}</Text>
       </Container>
     );
