@@ -1,17 +1,21 @@
-import styled from "styled-components/native";
+import styled from 'styled-components';
 import { MessageListContextProvider } from "@tchatozaure/shared/src/business/useMessageListContext";
 
-import * as styles from "@tchatozaure/shared/src/styles";
+import Header from './components/Header';
 
-import "./App.css";
 import Conversation from "./pages/conversation";
 
-function App() {
-  return (
+const Body = styled.div`
+  height: 100vh;
+`
+
+const App = () => (
+  <Body>
+    <Header />
     <MessageListContextProvider>
         <Conversation />
     </MessageListContextProvider>
-  );
-}
+  </Body>
+)
 
-export default App;
+export default App

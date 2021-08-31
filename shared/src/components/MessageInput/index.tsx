@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { StyleProp, ViewStyle } from 'react-native'
 import styled from 'styled-components/native'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
@@ -37,16 +38,17 @@ const ButtonText = styled.Text`
 type MessageFormProps = {
     onSend: (message: string) => void;
     displayButtonLabel?: boolean;
+    style?: StyleProp<ViewStyle>;
 }
 
-const MessageInput = ({ onSend, displayButtonLabel = true }: MessageFormProps) => {
+const MessageInput = ({ onSend, style, displayButtonLabel = true }: MessageFormProps) => {
     const [message, onChangeMessage] = useState("");
     const onSendPress = () => {
         onSend(message)
         onChangeMessage("")
     }
     return (
-        <Container>
+        <Container style={style}>
             <Input
                 onChangeText={onChangeMessage}
                 value={message}

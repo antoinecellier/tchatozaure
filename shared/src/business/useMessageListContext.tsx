@@ -31,21 +31,24 @@ export const MessageListContextProvider = ({
   children: JSX.Element;
 }) => {
   const [state, setState] = useState<MessageListState>({ messages: [] });
+  
   const addMessage = (state: MessageListState, message: Message) => {
     const newState = { ...state, messages: [...state.messages, message] };
     setState(newState);
     setTimeout(
-      () =>
+      () => {
         setState({
           ...newState,
           messages: [
             ...newState.messages,
             { sentAt: new Date(), owner: false, content: "c'est pas faux", avatar: "https://media.tenor.com/images/ac9efcf7bafca3c440df016f98e9e7d1/raw"},
           ],
-        }),
+        })
+      },
       1000
     );
   };
+
   return (
     <MessageListContext.Provider value={{ state, addMessage }}>
       {children}
