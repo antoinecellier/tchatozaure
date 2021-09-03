@@ -23,7 +23,8 @@ const Input = styled.TextInput`
 const TouchableOpacity = styled.TouchableOpacity`
     flex: 1;
     flex-direction: row;
-    justifyContent: center;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
