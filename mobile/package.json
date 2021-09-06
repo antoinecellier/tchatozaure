@@ -37,6 +37,7 @@
   "workspaces": {
     "nohoist": [ 
       "react-native",
+      "react-native-svg",
       "styled-components"
     ] 
   },

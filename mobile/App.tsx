@@ -1,31 +1,21 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
-import Bubble from '@tchatozaure/shared/src/components/Bubble';
-import MessageInput from '@tchatozaure/shared/src/components/MessageInput';
+import {MessageListContextProvider} from '@tchatozaure/shared/src/business/useMessageListContext';
+
+import Header from './components/Header';
+import Conversation from './screens/Conversation';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Bubble content="coucou" />
-          <Bubble content="ça va ?" secondary />
-          <MessageInput
-            displayButtonLabel={false}
-            onSend={msg => console.log(msg)}
-          />
-        </View>
-      </ScrollView>
+      <Header />
+      <MessageListContextProvider>
+        <Conversation />
+      </MessageListContextProvider>
     </SafeAreaView>
   );
 };
